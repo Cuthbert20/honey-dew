@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import './App.css';
+import Header from './components/Header'
 
 class App extends Component {
   constructor(){
     super()
 
     this.state = {
-      
+      toDos: ['Dishes', 'Laundry', 'Fence', 'Spray for Bugs', 'Build Cabin']
     }
   }
   render(){
   return (
     <div className="App">
+      <Header />
       <h1>Honey Dew List</h1>
     </div>
   );
