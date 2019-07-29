@@ -1,20 +1,37 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from './components/Header'
+import Header from './components/Header';
+import axios from 'axios';
 
 class App extends Component {
   constructor(){
     super()
 
     this.state = {
-      toDos: ['Dishes', 'Laundry', 'Fence', 'Spray for Bugs', 'Build Cabin']
+      todos: []
     }
   }
+componentDidMount(){
+  axios.get('/api/todos')
+  .then(res => {
+    console.log(res.data[2].todo_name)
+    this.setState({
+      todos: res.data
+    })
+  })
+}
+
   render(){
+    let allTodos = this.state.todos.map(val => (
+      <div>
+        <h4>{val.todo_name}, <span className='todo_info' >{val.todo_info}</span> </h4>
+      </div>
+    ))
   return (
     <div className="App">
       <Header />
       <h1>Honey Dew List</h1>
+      {allTodos}
     </div>
   );
 }

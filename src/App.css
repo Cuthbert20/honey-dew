@@ -23,6 +23,11 @@
   color: #61dafb;
 }
 
+.todo_info {
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-weight: 100;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

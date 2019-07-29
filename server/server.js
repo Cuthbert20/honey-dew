@@ -6,7 +6,15 @@ require('dotenv').config()
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env
 
+// Endpoints
+app.get('/api/todos', ctrl.getAll)
+app.post('/api/todos', ctrl.getNewTodo)
+
+
+
 app.use(express.json())
+
+
 
 massive(CONNECTION_STRING)
 .then(dbInstance => {
