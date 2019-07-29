@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Honey Dew List</h1>
     </div>
   );
 }
 
 export default App;
+
+//thing we need to do to the honey dew list
+//add new todo
+//update todo
+//delete todo
+//get list of todos
+//get one todo
+//mark todo as complete but, don't delete it
+//mark todo as urget
+//mark todo as dangers
