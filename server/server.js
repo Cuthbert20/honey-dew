@@ -5,6 +5,7 @@ const ctrl = require('./todoController')
 require('dotenv').config()
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env
+app.use(express.json())//when using express.json make sure you have it before your end points.
 
 // Endpoints
 app.get('/api/todos', ctrl.getAll)
@@ -12,7 +13,8 @@ app.post('/api/todos', ctrl.getNewTodo)
 
 
 
-app.use(express.json())
+
+
 
 
 
